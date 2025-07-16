@@ -8,6 +8,8 @@ import Skills from "./components/Skills";
 import Socials from "./components/Socials";
 import ThemeToggle from "./components/ThemeToggle";
 import ParticlesBackground from "./components/ParticlesBackground";
+import ProfessionalSkills from "./components/ProfessionalSkills";
+import Contact from "./components/Contact";
 
 export default function Home() {
   return (
@@ -17,11 +19,12 @@ export default function Home() {
         <ThemeToggle />
         <Hero />
         <About />
-        <Skills />
+        <ProfessionalSkills />
         <Projects />
         <Experience />
         <Education />
         <Socials />
+        <Contact/>
         <Footer />
       </main>
     </>

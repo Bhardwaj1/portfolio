@@ -3,21 +3,23 @@
 const projects = [
   {
     title: "My Portfolio Website",
-    description: "A personal portfolio site built with Next.js, Tailwind CSS, and Framer Motion.",
-    image: "/projects/portfolio.png",
+    description: "A modern, fully responsive portfolio website built using Next.js, Tailwind CSS, and Framer Motion. It showcases projects, experience, education, and technical skills with smooth animations and clean UI design. Optimized for performance and accessibility across all devices.",
+
+    image: "/portfolioProfilePicture.png",
     link: "https://your-portfolio-link.com",
   },
   {
-    title: "Todo App",
-    description: "A simple and clean todo app using React and Tailwind.",
-    image: "/projects/todo.png",
-    link: "https://your-todo-app-link.com",
+    title: "Chat App",
+    description: "A real-time chat application built with Next.js and Socket.io. It features instant messaging, user authentication, and dynamic chat rooms. The UI is designed with Tailwind CSS for a seamless user experience across devices. Perfect for collaborative or social communication.",
+    image: "/chatapp.jpg",
+    link: "https://your-weather-app-link",
   },
   {
-    title: "Weather App",
-    description: "Real-time weather updates using OpenWeather API and Next.js.",
-    image: "/projects/weather.png",
-    link: "https://your-weather-app-link.com",
+    title: "Expense Tracker",
+    description:
+      "A responsive expense tracking app built with React and Tailwind CSS. It allows users to add, delete, and categorize expenses while dynamically updating the balance and transaction history. Ideal for personal finance management with a clean, modern UI.",
+    image: "/expensetracker.webp",
+    link: "https://your-todo-app-link.com",
   },
 ];
 

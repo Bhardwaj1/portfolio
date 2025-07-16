@@ -25,7 +25,7 @@ export default function About() {
           viewport={{ once: true }}
           className="text-center md:text-left flex-1"
         >
-          <h2 className="text-4xl font-bold mb-4">About Me</h2>
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">About Me</h2>
           <p className="text-lg text-gray-700 dark:text-gray-300 max-w-xl mx-auto md:mx-0 leading-relaxed">
             Hi there! I'm <strong>Gaurav Bhardwaj</strong>, a dedicated Frontend
             Developer with over <strong>3 years of experience in React</strong>{" "}

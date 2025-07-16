@@ -2,30 +2,20 @@ import { FaGithub, FaLinkedin, FaTwitter, FaCode } from 'react-icons/fa';
 import { SiLeetcode } from 'react-icons/si';
 
 const socials = [
-  {
-    name: 'GitHub',
-    icon: <FaGithub size={30} />,
-    link: 'https://github.com/yourusername',
+   {
+    name: 'LeetCode',
+    icon: <SiLeetcode size={30} />,
+    link: 'https://leetcode.com/u/bhardwajgaurav204/',
   },
   {
     name: 'LinkedIn',
     icon: <FaLinkedin size={30} />,
-    link: 'https://linkedin.com/in/yourusername',
+    link: 'https://www.linkedin.com/in/gaurav-bhardwaj-073976179/',
   },
-  {
-    name: 'LeetCode',
-    icon: <SiLeetcode size={30} />,
-    link: 'https://leetcode.com/yourusername',
-  },
-  {
-    name: 'Twitter',
-    icon: <FaTwitter size={30} />,
-    link: 'https://twitter.com/yourusername',
-  },
-  {
-    name: 'Portfolio Source Code',
-    icon: <FaCode size={30} />,
-    link: 'https://github.com/yourusername/portfolio',
+   {
+    name: 'GitHub',
+    icon: <FaGithub size={30} />,
+    link: 'https://github.com/Bhardwaj1',
   },
 ];
 
