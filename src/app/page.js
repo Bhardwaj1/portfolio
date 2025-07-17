@@ -34,7 +34,6 @@ export default function Home() {
 
   return (
     <>
-      <ParticlesBackground />
       <main className="space-y-16 px-4 md:px-10 lg:px-20 py-10">
         <ThemeToggle />
         <Hero />
