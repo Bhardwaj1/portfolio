@@ -15,22 +15,23 @@ import Loader from "./components/Loader";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
+  const [mounted, setMounted] = useState(false); // prevent SSR mismatches
 
   useEffect(() => {
-    // Run only in the browser
-    if (typeof window !== "undefined" && typeof document !== "undefined") {
-      const handleLoad = () => {
-        setTimeout(() => setLoading(false), 1000);
-      };
+    setMounted(true); // confirms it's running on the client
+    const handleLoad = () => {
+      setTimeout(() => setLoading(false), 1000);
+    };
 
-      if (document.readyState === "complete") {
-        handleLoad();
-      } else {
-        window.addEventListener("load", handleLoad);
-        return () => window.removeEventListener("load", handleLoad);
-      }
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      window.addEventListener("load", handleLoad);
+      return () => window.removeEventListener("load", handleLoad);
     }
   }, []);
+
+  if (!mounted) return null;
 
   if (loading) return <Loader />;
 
