@@ -15,10 +15,8 @@ import Loader from "./components/Loader";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
-  const [mounted, setMounted] = useState(false); // prevent SSR mismatches
 
   useEffect(() => {
-    setMounted(true); // confirms it's running on the client
     const handleLoad = () => {
       setTimeout(() => setLoading(false), 1000);
     };
@@ -30,8 +28,6 @@ export default function Home() {
       return () => window.removeEventListener("load", handleLoad);
     }
   }, []);
-
-  if (!mounted) return null;
 
   if (loading) return <Loader />;
 
