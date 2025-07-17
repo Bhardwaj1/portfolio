@@ -1,4 +1,4 @@
-'use client';
+
 export const dynamic = 'force-dynamic'; // disables SSG
 import { useEffect, useState } from 'react';
 import ThemeToggle from './components/ThemeToggle';
