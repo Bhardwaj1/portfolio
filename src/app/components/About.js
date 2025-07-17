@@ -29,7 +29,7 @@ export default function About() {
             About Me
           </h2>
           <p className="text-lg text-gray-700 dark:text-gray-300 max-w-xl mx-auto md:mx-0 leading-relaxed">
-            Hi there! I'm <strong>Gaurav Bhardwaj</strong>, a dedicated Frontend
+            Hi there! {"I'm"} <strong>Gaurav Bhardwaj</strong>, a dedicated Frontend
             Developer with over <strong>3 years of experience in React</strong>{" "}
             and more than{" "}
             <strong>1 year of hands-on experience in Node.js</strong>. I

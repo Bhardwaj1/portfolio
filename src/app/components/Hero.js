@@ -19,7 +19,7 @@ export default function Hero() {
           className="text-center lg:text-left flex-1"
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-            Hi, I'm Gaurav Bhardwaj
+            Hi, {"I'm Gaurav"} Bhardwaj
           </h1>
 
           <h2 className="text-xl md:text-2xl lg:text-3xl font-medium text-gray-700 dark:text-gray-300 mb-6">
