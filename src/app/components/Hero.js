@@ -30,7 +30,7 @@ export default function Hero() {
                 "Next.js Wizard",
                 "MERN Stack Developer",
                 "Backend Developer",
-                "Node.js Developer"
+                "Node.js Developer",
               ]}
               loop
               cursor
@@ -62,24 +62,17 @@ export default function Hero() {
 
         {/* Right: Profile Picture with 3D effect */}
         {/* Right: Profile Picture with 3D effect */}
-        <Tilt
-          glareEnable={true}
-          glareMaxOpacity={0.4}
-          scale={1.05}
-          transitionSpeed={400}
-          className="rounded-full shadow-xl flex-1 max-w-[320px] xl:max-w-[400px]"
-        >
-          <div className="aspect-square w-40 sm:w-48 md:w-56 lg:w-64 xl:w-80 rounded-full overflow-hidden">
-            <Image
-              src="/GauravProfile.jpeg"
-              alt="Gaurav's Profile Picture"
-              width={400}
-              height={400}
-              className="w-full h-full object-cover"
-              priority
-            />
-          </div>
-        </Tilt>
+
+        <div className="aspect-square w-40 sm:w-48 md:w-56 lg:w-64 xl:w-80 rounded-full overflow-hidden">
+          <Image
+            src="/GauravProfile.jpeg"
+            alt="Gaurav's Profile Picture"
+            width={400}
+            height={400}
+            className="w-full h-full object-cover"
+            priority
+          />
+        </div>
       </div>
     </section>
   );

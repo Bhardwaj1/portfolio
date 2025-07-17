@@ -4,22 +4,37 @@ import { useEffect, useState } from 'react';
 
 export default function ThemeToggle() {
   const [isDark, setIsDark] = useState(false);
+  const [mounted, setMounted] = useState(false); // Important to avoid hydration mismatch
 
   useEffect(() => {
-    const stored = localStorage.getItem('theme');
-    if (stored === 'dark') {
-      document.documentElement.classList.add('dark');
-      setIsDark(true);
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      const stored = localStorage.getItem('theme');
+      const prefersDark = stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+      if (prefersDark) {
+        document.documentElement.classList.add('dark');
+        setIsDark(true);
+      } else {
+        document.documentElement.classList.remove('dark');
+        setIsDark(false);
+      }
+
+      setMounted(true);
     }
   }, []);
 
   const toggleTheme = () => {
-    const html = document.documentElement;
-    const next = isDark ? 'light' : 'dark';
-    html.classList.toggle('dark');
-    localStorage.setItem('theme', next);
-    setIsDark(!isDark);
+    if (typeof document !== 'undefined') {
+      const html = document.documentElement;
+      const next = isDark ? 'light' : 'dark';
+
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', next);
+      setIsDark(!isDark);
+    }
   };
+
+  if (!mounted) return null; // Prevent rendering until after hydration
 
   return (
     <button
