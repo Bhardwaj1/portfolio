@@ -1,20 +1,19 @@
-import { FaGithub, FaLinkedin, FaTwitter, FaCode } from 'react-icons/fa';
-import { SiLeetcode } from 'react-icons/si';
+import Image from 'next/image';
 
 const socials = [
    {
     name: 'LeetCode',
-    icon: <SiLeetcode size={30} />,
+    icon: '/leetcode.svg',
     link: 'https://leetcode.com/u/bhardwajgaurav204/',
   },
   {
     name: 'LinkedIn',
-    icon: <FaLinkedin size={30} />,
+    icon: '/linkedin.svg',
     link: 'https://www.linkedin.com/in/gaurav-bhardwaj-073976179/',
   },
    {
     name: 'GitHub',
-    icon: <FaGithub size={30} />,
+    icon: '/github.svg',
     link: 'https://github.com/Bhardwaj1',
   },
 ];
@@ -22,7 +21,7 @@ const socials = [
 export default function Socials() {
   return (
     <section className="py-16 px-4 text-center">
-      <h2 className="text-4xl font-bold mb-8">Let’s Connect</h2>
+      <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">Let’s Connect</h2>
       <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
         You can find me here:
       </p>
@@ -33,10 +32,15 @@ export default function Socials() {
             href={social.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
             title={social.name}
+            className="transition transform hover:scale-110"
           >
-            {social.icon}
+            <Image
+              src={social.icon}
+              alt={social.name}
+              width={40}
+              height={40}
+            />
           </a>
         ))}
       </div>

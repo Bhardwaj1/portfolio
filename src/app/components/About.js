@@ -6,7 +6,7 @@ import { Player } from "@lottiefiles/react-lottie-player";
 export default function About() {
   return (
     <section className="py-16 px-4" id="about">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-36">
         {/* Lottie Animation */}
         <div className="w-64 h-64 md:w-80 md:h-80 flex-shrink-0">
           <Player
@@ -21,11 +21,13 @@ export default function About() {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6, amount: 0.3 }}
           viewport={{ once: true }}
           className="text-center md:text-left flex-1"
         >
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">About Me</h2>
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
+            About Me
+          </h2>
           <p className="text-lg text-gray-700 dark:text-gray-300 max-w-xl mx-auto md:mx-0 leading-relaxed">
             Hi there! I'm <strong>Gaurav Bhardwaj</strong>, a dedicated Frontend
             Developer with over <strong>3 years of experience in React</strong>{" "}

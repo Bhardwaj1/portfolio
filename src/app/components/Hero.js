@@ -28,7 +28,9 @@ export default function Hero() {
                 "Frontend Developer",
                 "React Enthusiast",
                 "Next.js Wizard",
-                "UI/UX Explorer",
+                "MERN Stack Developer",
+                "Backend Developer",
+                "Node.js Developer"
               ]}
               loop
               cursor

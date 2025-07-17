@@ -17,7 +17,7 @@ const experiences = [
       • Integrated frontend with backend services via Axios.
       • Focused on performance optimization for better UX.
     `,
-    tech: "React.js, Node.js, Express, MongoDB",
+    tech: "React.js, Node.js, Express.js, MongoDB",
   },
   {
     company: "Web Idea Solution LLP",
@@ -32,7 +32,7 @@ const experiences = [
       • Implemented real-time attendance & grade updates using WebSockets.
       • Optimized MongoDB API performance with indexing and pagination, reducing response times by 50%.
     `,
-    tech: "React.js, Node.js, Express, MongoDB",
+    tech: "React.js, Node.js, Express,js, MongoDB",
   },
 ];
 
