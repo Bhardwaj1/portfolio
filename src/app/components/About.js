@@ -1,7 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Player } from "@lottiefiles/react-lottie-player";
+import dynamic from "next/dynamic";
+
+const Player = dynamic(
+  () => import("@lottiefiles/react-lottie-player").then((mod) => mod.Player),
+  { ssr: false }
+);
 
 export default function About() {
   return (
@@ -30,8 +35,7 @@ export default function About() {
           </h2>
           <p className="text-lg text-gray-700 dark:text-gray-300 max-w-xl mx-auto md:mx-0 leading-relaxed">
             Hi there! {"I'm"} <strong>Gaurav Bhardwaj</strong>, a dedicated Frontend
-            Developer with over <strong>3 years of experience in React</strong>{" "}
-            and more than{" "}
+            Developer with over <strong>3 years of experience in React</strong> and more than{" "}
             <strong>1 year of hands-on experience in Node.js</strong>. I
             specialize in crafting intuitive, high-performance user interfaces
             using modern technologies like <strong>Next.js</strong>,{" "}

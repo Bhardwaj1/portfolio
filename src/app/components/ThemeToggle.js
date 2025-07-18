@@ -11,10 +11,10 @@ export default function ThemeToggle() {
     const prefersDark = stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches);
 
     if (prefersDark) {
-      document.documentElement.classList.add('dark');
+      window.document.documentElement.classList.add('dark');
       setIsDark(true);
     } else {
-      document.documentElement.classList.remove('dark');
+      window.document.documentElement.classList.remove('dark');
       setIsDark(false);
     }
 
@@ -22,7 +22,7 @@ export default function ThemeToggle() {
   }, []);
 
   const toggleTheme = () => {
-    const html = document.documentElement;
+    const html = window.document.documentElement;
     const next = isDark ? 'light' : 'dark';
 
     html.classList.toggle('dark');

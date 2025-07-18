@@ -1,5 +1,4 @@
-
-export const dynamic = 'force-dynamic'; // disables SSG
+'use client';
 import { useEffect, useState } from 'react';
 import ThemeToggle from './components/ThemeToggle';
 import Loader from './components/Loader';
@@ -25,7 +24,7 @@ export default function Home() {
     };
 
     if (typeof window !== 'undefined') {
-      if (document.readyState === 'complete') {
+      if (window.document.readyState === 'complete') {
         handleLoad();
       } else {
         window.addEventListener('load', handleLoad);
